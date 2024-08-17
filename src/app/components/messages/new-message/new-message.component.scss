@@ -1,0 +1,39 @@
+.chat-input-container {
+  padding: 16px;
+  background-color: #F4F4F4;
+
+  mat-spinner {
+    position: relative;
+    left: 50%;
+  }
+
+  .send-image-btn {
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  .mat-mdc-button:not(:disabled) {
+    color: #5014D0;
+  }
+
+  .message-input {
+    display: block;
+    margin-bottom: 10px;
+
+    input {
+      color: black;
+    }
+
+    mat-icon {
+      color: #5014D0;
+    }
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6B7280;
+  }
+}

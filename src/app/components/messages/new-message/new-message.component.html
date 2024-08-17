@@ -1,0 +1,41 @@
+<div class="chat-input-container">
+  @if(loading) {
+  <mat-spinner></mat-spinner>
+  } @else {
+  <button
+    mat-button
+    color="primary"
+    class="send-image-btn"
+    (click)="triggerImageUpload()"
+  >
+    Send Image
+    <mat-icon iconPositionEnd>send</mat-icon>
+  </button>
+
+  <input
+    type="file"
+    #fileInput
+    style="display: none"
+    (change)="onFileSelected($event)"
+    accept="image/*"
+  />
+
+  <mat-form-field appearance="outline" class="message-input">
+    <input
+      matInput
+      placeholder="Write something..."
+      [(ngModel)]="userInput"
+      (keydown.enter)="onEnterKey($event)"
+    />
+    <mat-icon matSuffix (click)="sendMessage()">send</mat-icon>
+  </mat-form-field>
+
+  <input
+    type="checkbox"
+    [(ngModel)]="sendOnEnter"
+    color="primary"
+    class="send-on-enter"
+  />
+  <span>Send message immediately on Enter key</span>
+  }
+</div>

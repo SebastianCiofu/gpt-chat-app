@@ -1,0 +1,8 @@
+<div class="messages-container">
+  @for(message of messages$ | async; track message.id) {
+    <app-message [message]="message" />
+  } @empty {
+    <app-empty/>
+  }
+</div>
+<app-new-message />

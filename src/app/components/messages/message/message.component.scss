@@ -1,0 +1,43 @@
+mat-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  padding: 16px;
+  border-bottom: 1px solid #D1D5DB;
+  box-shadow: none;
+  background-color: white;
+  border-radius: unset;
+
+  img {
+    border-radius: 0.25rem;
+  }
+
+  .message-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .message-content {
+    display: flex;
+    gap: 22px;
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.bot-message {
+  background-color: #F4F4F4;
+
+  .message-content {
+    flex-direction: row-reverse;
+  }
+}
+
+mat-icon {
+  color: #9CA3AF;
+}

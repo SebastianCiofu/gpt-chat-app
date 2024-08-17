@@ -1,0 +1,25 @@
+<mat-card [class.bot-message]="message.sender === 'bot'">
+  @if(message.sender === 'user') {
+    <div class="message-actions">
+      <button mat-icon-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="content_copy" (click)="copyText(message.content)"></mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" (click)="deleteMessage(message.id)"></mat-icon>
+      </button>
+    </div>
+  }
+
+  <div class="message-content">
+    <p>
+      {{ message.content }}
+    </p>
+    @if(message.imageUrl) {
+      <img [src]="message.imageUrl" alt="user image" class="message-image">
+    }
+    <div class="message-avatar">
+      <img src="https://picsum.photos/seed/picsum/200/300" alt="Avatar" class="avatar">
+      <div class="message-author">{{ message.sender === 'user' ? 'User': 'AI'}}</div>
+    </div>
+  </div>
+</mat-card>
